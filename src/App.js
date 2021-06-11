@@ -65,24 +65,32 @@ function App() {
         ]
     })
 
-    setTimeout(() => {
+
+
+    let articleList = stateArticle.articles.map(article => <Card key={article.id} title={article.title} body={article.body} />)
+    const loadMore = (e) => {
+        let article = [
+            { id : 5 , title : 'article 5' , body : 'this is article 5'},
+            { id : 6 , title : 'article 6' , body : 'this is article 6'},
+            { id : 7 , title : 'article 7' , body : 'this is article 7'},
+            { id : 8 , title : 'article 8' , body : 'this is article 8'},
+        ]
+
         setArticleState({
-            articles : [
-                { id : 4 , title : 'article 4' , body : 'this is article 4'},
-                { id : 5 , title : 'article 5' , body : 'this is article 5'},
-                { id : 6 , title : 'article 6' , body : 'this is article 6'},
-                { id : 7 , title : 'article 7' , body : 'this is article 7'},
-            ]
+            articles: [ ... stateArticle.articles , ... article]
         })
-    }, 2000);
+    }
 
     return (
         <div className="App">
             {
-                stateArticle.articles.map(article => <Card key={article.id} title={article.title} body={article.body} />)
+                articleList
                 // stateArticle.articles.map((article , index) => <Card key={index} title={article.title} body={article.body} />)
             }
             <Thumbnail title="x" body="y" />
+
+            <button onClick={loadMore}>load more</button>
+
         </div>
     );
 }
