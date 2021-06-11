@@ -61,6 +61,7 @@ function App() {
             { id : 1 , title : 'article 1' , body : 'this is article 1'},
             { id : 2 , title : 'article 2' , body : 'this is article 2'},
             { id : 3 , title : 'article 3' , body : 'this is article 3'},
+            { id : 4 , title : 'article 4' , body : 'this is article 4'},
         ]
     })
 
@@ -70,6 +71,7 @@ function App() {
                 { id : 4 , title : 'article 4' , body : 'this is article 4'},
                 { id : 5 , title : 'article 5' , body : 'this is article 5'},
                 { id : 6 , title : 'article 6' , body : 'this is article 6'},
+                { id : 7 , title : 'article 7' , body : 'this is article 7'},
             ]
         })
     }, 2000);
@@ -79,6 +81,7 @@ function App() {
             {
                 stateArticle.articles.map(article => <Card title={article.title} body={article.body} />)
             }
+            <Thumbnail title="x" body="y" />
         </div>
     );
 }
