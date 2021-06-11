@@ -25,6 +25,20 @@ class App extends Component{
             { id : 4 , title : 'article 4' , body : 'This is article 4'},
         ]
     }
+
+    constructor() {
+        super();
+        setTimeout(() => {
+            this.setState({
+                articles : [
+                    { id : 5 , title : 'article 5' , body : 'This is article 5'},
+                    { id : 6 , title : 'article 6' , body : 'This is article 6'},
+                    { id : 7 , title : 'article 7' , body : 'This is article 7'},
+                    { id : 8 , title : 'article 8' , body : 'This is article 8'},
+                ]
+            })
+        }, 2000);
+    }
     render() {
         return (
             <div className="App">
