@@ -68,10 +68,10 @@ import Thumbnail from "./Thumbnail";
 class App extends Component{
     state = {
         articles : [
-            { id : 1 , title : 'article 1' , body : 'This is article 1'},
-            { id : 2 , title : 'article 2' , body : 'This is article 2'},
-            { id : 3 , title : 'article 3' , body : 'This is article 3'},
-            { id : 4 , title : 'article 4' , body : 'This is article 4'},
+            { id : 1 , title : 'article 1' , body : 'This is article 1' , active : 1 },
+            { id : 2 , title : 'article 2' , body : 'This is article 2' , active : 1 },
+            { id : 3 , title : 'article 3' , body : 'This is article 3' , active : 0 },
+            { id : 4 , title : 'article 4' , body : 'This is article 4' , active : 1 },
         ],
         loading : false
     }
@@ -82,10 +82,10 @@ class App extends Component{
         this.setState({ loading : true })
         setTimeout(() => {
             let article = [
-                { id : 5 , title : 'article 5' , body : 'this is article 5'},
-                { id : 6 , title : 'article 6' , body : 'this is article 6'},
-                { id : 7 , title : 'article 7' , body : 'this is article 7'},
-                { id : 8 , title : 'article 8' , body : 'this is article 8'},
+                { id : 5 , title : 'article 5' , body : 'this is article 5' , active : 1 },
+                { id : 6 , title : 'article 6' , body : 'this is article 6' , active : 0 },
+                { id : 7 , title : 'article 7' , body : 'this is article 7' , active : 0 },
+                { id : 8 , title : 'article 8' , body : 'this is article 8' , active : 1 },
             ]
 
             this.setState(prevSate => {
@@ -98,10 +98,11 @@ class App extends Component{
     }
 
     render() {
-        let articleList = this.state.articles.map(article => <Card key={article.id} title={article.title} body={article.body} />)
+        let articleList = this.state.articles.map(article => article.active ? <Card key={article.id} title={article.title} body={article.body} /> : null)
         return (
             <div className="App">
                 { articleList }
+                <button onClick={this.loadMore}>load more</button>
                 {
                     this.state.loading
                         ? <div>Loading ...</div>
@@ -111,7 +112,7 @@ class App extends Component{
                 {/*<Thumbnail title="x" body="y" />*/}
 
 
-                <button onClick={this.loadMore}>load more</button>
+
 
             </div>
         );
