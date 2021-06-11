@@ -1,13 +1,13 @@
 
 
-function Card() {
+function Card(props) {
     return (
         <div className="card">
             <header className="card-header">
-                Header
+                {props.title}
             </header>
             <section className="card-content">
-                lorem lorem lorem lorem
+                {props.body}
             </section>
             <footer className="card-footer">
                 It's a footer
