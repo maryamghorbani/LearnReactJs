@@ -79,7 +79,7 @@ function App() {
     return (
         <div className="App">
             {
-                stateArticle.articles.map(article => <Card title={article.title} body={article.body} />)
+                stateArticle.articles.map(article => <Card key={article.id} title={article.title} body={article.body} />)
             }
             <Thumbnail title="x" body="y" />
         </div>
