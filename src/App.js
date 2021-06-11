@@ -80,6 +80,7 @@ function App() {
         <div className="App">
             {
                 stateArticle.articles.map(article => <Card key={article.id} title={article.title} body={article.body} />)
+                // stateArticle.articles.map((article , index) => <Card key={index} title={article.title} body={article.body} />)
             }
             <Thumbnail title="x" body="y" />
         </div>
