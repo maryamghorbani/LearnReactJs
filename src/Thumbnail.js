@@ -3,7 +3,7 @@ import { Component } from 'react'
 class Thumbnail extends Component{
 
     eventHandler (e) {
-        alert(this.props.title)
+        alert('clicked')
     }
 
     render() {
@@ -14,7 +14,7 @@ class Thumbnail extends Component{
                 </div>
                 <section className="thumbnail-body">
                     <p>{this.props.body}</p>
-                    <button onClick={(e) => this.eventHandler(e)}>Click</button>
+                    <button onClick={this.eventHandler}>Click</button>
                 </section>
             </div>
         )
