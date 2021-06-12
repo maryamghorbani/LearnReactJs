@@ -1,6 +1,7 @@
 .card {
-    border: 2px solid dodgerblue;
+    border: 1px solid #acb2b6;
     border-radius: 6px;
     padding: 2%;
-    margin: 2%;
+    margin: 2% auto;
+    width: 50%;
 }

@@ -100,7 +100,8 @@ class App extends Component{
     render() {
         let articleList = this.state.articles.map(article => article.active ? <Card key={article.id} title={article.title} body={article.body} /> : null)
         let btnStyles = {
-            backgroundColor : 'white',
+            backgroundColor : '#4e4d4d',
+            color : 'white',
             borderRadius : '4px',
             border : 'none',
             padding : '8px 12px'

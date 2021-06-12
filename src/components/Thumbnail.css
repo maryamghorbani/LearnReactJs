@@ -1,5 +1,6 @@
 .thumbnail {
     border: 2px solid dodgerblue;
     border-radius: 6px;
-    margin: 2%;
+    margin: 0 2%;
+    width: 50%;
 }
