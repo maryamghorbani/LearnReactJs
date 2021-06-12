@@ -1,4 +1,5 @@
-import { Component } from 'react'
+import { Component } from 'react';
+import './Thumbnail.css'
 
 class Thumbnail extends Component{
 

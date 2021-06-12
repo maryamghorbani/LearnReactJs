@@ -2,8 +2,8 @@ import logo from './logo.svg';
 import { Component } from 'react'
 import { useState } from 'react';
 import './App.css';
-import Card from "./Card";
-import Thumbnail from "./Thumbnail";
+import Card from "./components/Card";
+import Thumbnail from "./components/Thumbnail";
 
 // function App() {
 //   return (
@@ -99,10 +99,17 @@ class App extends Component{
 
     render() {
         let articleList = this.state.articles.map(article => article.active ? <Card key={article.id} title={article.title} body={article.body} /> : null)
+        let btnStyles = {
+            backgroundColor : 'white',
+            borderRadius : '4px',
+            border : 'none',
+            padding : '8px 12px'
+        }
         return (
+
             <div className="App">
                 { articleList }
-                <button onClick={this.loadMore}>load more</button>
+                <button style={btnStyles} onClick={this.loadMore}>load more</button>
                 {
                     this.state.loading
                         ? <div>Loading ...</div>
