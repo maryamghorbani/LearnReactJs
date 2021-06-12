@@ -5,3 +5,6 @@
     margin: 2% auto;
     width: 50%;
 }
+.card:hover {
+    background-color: #ecf4fa;
+}
