@@ -8,7 +8,7 @@ function Card(props) {
             </header>
             <section className="card-content">
                 <p>{props.body}</p>
-                <button onClick={() => alert(props.title)}>Click</button>
+                <button className="clickbtn" onClick={() => alert(props.title)}>Click</button>
             </section>
             <footer className="card-footer">
                 It's a footer
