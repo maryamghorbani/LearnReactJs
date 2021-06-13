@@ -1,10 +1,8 @@
-import logo from './logo.svg';
-import { Component } from 'react'
-import { useState } from 'react';
+import { Component } from 'react';
 import './App.css';
 import Card from "./components/Card";
 import { Carousel } from 'react-bootstrap';
-import Thumbnail from "./components/Thumbnail";
+
 
 // function App() {
 //   return (
@@ -91,7 +89,7 @@ class App extends Component{
 
             this.setState(prevSate => {
                 return {
-                    articles : [ ... prevSate.articles , ... article],
+                    articles : [ ...prevSate.articles , ...article],
                     loading : false
                 }
             })
