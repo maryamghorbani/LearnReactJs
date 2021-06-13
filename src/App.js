@@ -3,6 +3,7 @@ import { Component } from 'react'
 import { useState } from 'react';
 import './App.css';
 import Card from "./components/Card";
+import { Carousel } from 'react-bootstrap';
 import Thumbnail from "./components/Thumbnail";
 
 // function App() {
@@ -109,6 +110,49 @@ class App extends Component{
         return (
 
             <div className="App">
+
+
+                <Carousel>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src="https://www.mindinventory.com/blog/wp-content/uploads/2018/07/reactjs-1200x600.jpg"
+                            alt="First slide"
+                        />
+                        <Carousel.Caption>
+                            <h3>First slide label</h3>
+                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src="http://training.technoloader.com/blog/wp-content/uploads/2019/05/React-Developer.jpg"
+                            alt="Second slide"
+                        />
+
+                        <Carousel.Caption>
+                            <h3>Second slide label</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src="https://www.greenstechnologys.com/images/reactjs.jpg"
+                            alt="Third slide"
+                        />
+
+                        <Carousel.Caption>
+                            <h3>Third slide label</h3>
+                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                </Carousel>
+
+
+
+
                 { articleList }
                 <button style={btnStyles} onClick={this.loadMore}>load more</button>
                 {
