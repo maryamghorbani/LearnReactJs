@@ -2,6 +2,7 @@ import { Component } from 'react';
 import './App.css';
 import Card from "./components/Card";
 import { Carousel } from 'react-bootstrap';
+import ErrorBoundary from "./components/errors/ErrorBoundary";
 
 
 // function App() {
@@ -97,7 +98,7 @@ class App extends Component{
     }
 
     render() {
-        let articleList = this.state.articles.map(article => article.active ? <Card key={article.id} title={article.title} body={article.body} /> : null)
+        let articleList = this.state.articles.map(article => article.active ? <ErrorBoundary><Card key={article.id} title={article.title} body={article.body} /></ErrorBoundary> : null)
         let btnStyles = {
             backgroundColor : '#56b4fc',
             color : 'white',
