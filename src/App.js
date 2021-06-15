@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { PureComponent } from 'react';
 import './App.css';
 import Card from "./components/Card";
 import { Carousel } from 'react-bootstrap';
@@ -65,7 +65,9 @@ import ErrorBoundary from "./components/errors/ErrorBoundary";
 
 
 // ==========================
-class App extends Component{
+class App extends PureComponent {
+
+
     state = {
         articles : [
             { id : 1 , title : 'article 1' , body : 'This is article 1' , active : 1 },

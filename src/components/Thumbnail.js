@@ -1,7 +1,7 @@
-import { Component } from 'react';
+import { PureComponent } from 'react';
 import './Thumbnail.css'
 
-class Thumbnail extends Component{
+class Thumbnail extends PureComponent{
 
     eventHandler (e) {
         alert('clicked')
